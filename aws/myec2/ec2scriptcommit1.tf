@@ -45,7 +45,7 @@ resource "aws_instance" "example" {
   ami           = "ami-020edb5952484401d"
   instance_type = "t2.small"
   subnet_id=local.subnet[3]
-
+	count=3
 	tags = {
 	  Name = "hellovm"			
 	}	
